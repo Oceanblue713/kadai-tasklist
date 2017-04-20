@@ -13,9 +13,11 @@
       <td><%= @task.content %></td>
     </tr>
   </table>
-<span class="glyphicon glyphicon-edit">
-<%= link_to 'このタスクを編集する', edit_task_path(@task), class: 'btn btn-info' %>
-</span>
+
+<a class="btn btn-info" href="<%= edit_task_path(@task) %>">
+  <span class="glyphicon glyphicon-edit">
+  このタスクを編集する
+</a>
 <span class="glyphicon glyphicon-trash">
 <%= link_to 'このタスクを削除する', @task, method: :delete, data:{ confirm:'本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
-</span>    
+</span>
